@@ -1,0 +1,245 @@
+export const AuthApiRoutes = {
+  LOGIN: '/auth/api/User/token',
+  FIND_USER_BY_ID: '/auth/api/User/find',
+  GET_USER_BY_TOKEN: '/auth/api/User/find',
+  GET_LIST_USER: '/auth/api/User/all',
+  GET_LIST_ROLE: '/auth/api/Role/all',
+  ADD_ROLE: '/auth/api/Role/add-role',
+  DELETE_ROLE: '/auth/api/Role/delete-role',
+  UPDATE_PERMISSION_IN_ROLE: '/auth/api/Role/update-permissions',
+  UPDATE_USER_IN_ROLE: '/auth/api/Role/update-users',
+  GET_LIST_PERMISSION: '/auth/api/Role/getPermissions',
+  GET_PERSONNEL_ALL: '/auth/api/User/all',
+  DELETE_PERSONNEL: '/auth/api/User/delete',
+  CHANGE_ACTIVE: '/auth/api/User/change-active',
+  CREATE_PERSONNEL: '/auth/api/User/add',
+  CHECK_USER_NAME_PERSONNEL: '/auth/api/User/check-username-unique',
+  CHECK_CODE_PERSONNEL: '/auth/api/User/check-code-unique',
+  UPDATE_PERSONNEL: '/auth/api/User/update',
+  CHECK_PASSWORD: '/auth/api/User/check-password',
+  UPDATE_PROFILE_USER: '/auth/api/User/update-profile',
+};
+
+export const RESPONSE_CONSTANT = {
+  LOGIN_SUCCESS: 'LOGIN_SUCCESS',
+  LOGIN_FAIL: 'LOGIN_FAIL',
+  GET_USER_BY_ID_SUCCESS: 'GET_USER_BY_ID_SUCCESS',
+  GET_USER_BY_ID_FAIL: 'GET_USER_BY_ID_FAIL',
+  UPDATE_ROLE_SUCCESS: 'UPDATE_ROLE_SUCCESS',
+  UPDATE_ROLE_FAIL: 'UPDATE_ROLE_FAIL',
+  ADD_ROLE_SUCCESS: 'ADD_ROLE_SUCCESS',
+  ADD_ROLE_FAIL: 'ADD_ROLE_FAIL',
+  DELETE_ROLE_SUCCESS: 'DELETE_ROLE_SUCCESS',
+  DELETE_ROLE_FAIL: 'DELETE_ROLE_FAIL',
+  DELETE_PERSONNEL_SUCCESS: 'DELETE_PERSONNEL_SUCCESS',
+  CHANGE_ACTIVE_SUCCESS: 'CHANGE_ACTIVE_SUCCESS',
+  CHECK_USER_NAME_PER_SUCCESS: 'CHECK_USER_NAME_PER_SUCCESS',
+  CHECK_CODE_PER_SUCCESS: 'CHECK_CODE_PER_SUCCESS',
+  CREATE_PERSONNEL_SUCCESS: 'CREATE_PERSONNEL_SUCCESS',
+  UPDATE_PERSONNEL_SUCCESS: 'UPDATE_PERSONNEL_SUCCESS',
+  CHECK_PASSWORD_SUCCESS: 'CHECK_PASSWORD_SUCCESS',
+  UPDATE_PROFILE_USER_SUCCESS: 'UPDATE_PROFILE_USER_SUCCESS',
+  DELETE_PERSONNEL_FAIL: 'DELETE_PERSONNEL_FAIL',
+  CHANGE_ACTIVE_FAIL: 'CHANGE_ACTIVE_FAIL',
+  CHECK_USER_NAME_PER_FAIL: 'CHECK_USER_NAME_PER_FAIL',
+  CHECK_CODE_PER_FAIL: 'CHECK_CODE_PER_FAIL',
+  UPDATE_PERSONNEL_FAIL: 'UPDATE_PERSONNEL_FAIL',
+  CHECK_PASSWORD_FAIL: 'CHECK_PASSWORD_FAIL',
+  UPDATE_PROFILE_USER_FAIL: 'UPDATE_PROFILE_USER_FAIL',
+  TOKEN_EXPIRED: 'TOKEN_EXPIRED',
+};
+
+export const RESPONSE_MESSAGE = {
+  LOGIN_SUCCESS: 'Đăng Nhập Thành Công',
+  UPDATE_ROLE_SUCCESS: 'Thay Đổi Quyền Truy Cập Thành Công',
+  ADD_ROLE_SUCCESS: 'Tạo Mới Quyền Truy Cập Thành Công',
+  DELETE_ROLE_SUCCESS: 'Xoá Quyền Truy Cập Thành Công',
+  GET_USER_BY_ID_SUCCESS: 'Lấy thông tin người dùng thành công.',
+  DELETE_MESSAGE_SUCCESS: 'Xóa Nhân Viên Thành Công',
+  CHANGE_ACTIVE_SUCCESS: 'Thay Đổi Trạng Thái Thành Công',
+  CREATE_PERSONNEL_SUCCESS: 'Tạo Nhân Viên Thành Công',
+  CHECK_CODE_PER_SUCCESS: 'Mã Nhân Viên Có Thể Sử Dụng',
+  CHECK_USER_NAME_PER_SUCCESS: 'Tên Đăng Nhập Có Thể Sử Dụng',
+  UPDATE_PERSONNEL_SUCCESS: 'Cập Nhật Thông Tin Thành Công',
+  CHECK_PASSWORD_SUCCESS: 'Mật Khẩu Cũ Chính Xác',
+  UPDATE_PROFILE_USER_SUCCESS: 'Thay Đổi Mật Khẩu Thành Công',
+  DELETE_MESSAGE_FAIL: 'Xóa Nhân Viên Thất Bại',
+  CHANGE_ACTIVE_MESSAGE_FAIL: 'Thay Đổi Trạng Thái Thất Bại',
+  CHECK_CODE_PER_FAIL: 'Mã Nhân Viên Đã Tồn Tại',
+  CHECK_USER_NAME_PER_FAIL: 'Tên Đăng Nhập Đã Tồn Tại',
+  UPDATE_PERSONNEL_FAIL: 'Cập Nhật Thông Tin Thất Bại',
+  NOTIFICATION_MESSAGE_FAIL: 'Tên Đăng Nhập Và Mã Bệnh Nhân Đã Tồn Tại',
+  CHECK_PASSWORD_FAIL: 'Mật Khẩu Cũ Không Chính Xác',
+  UPDATE_PROFILE_USER_FAIL: 'Thay Đổi Mật Khẩu Không Thành Công',
+  NOTIFICATION_MESSAGE_FAIL_UPDATE_PROFILE: 'Mật Khẩu Cũ Không Chính Xác',
+  TOKEN_EXPIRED: 'Phiên Làm Việc Đã Hết Hạn, Vui Lòng Đăng Nhập Lại',
+};
+
+export const columnsListHRM = [
+  { id: '#', lable: 'No', minWidth: 100 },
+  { id: 'image_url', lable: 'Hình', minWidth: 70 },
+  { id: 'user_name', lable: 'Tên đăng nhập', minWidth: 200 },
+  { id: 'code', lable: 'Mã nhân viên', minWidth: 200 },
+  { id: 'full_name', lable: 'Tên nhân viên', minWidth: 250 },
+  { id: 'email', lable: 'Email', minWidth: 250 },
+  { id: 'phone', lable: 'Số điện thoại', minWidth: 200 },
+  { id: 'sex', lable: 'Giới tính', minWidth: 100 },
+  { id: 'birthdate', lable: 'Ngày sinh', minWidth: 120 },
+  { id: 'title_description', lable: 'Chức danh', minWidth: 250 },
+  { id: 'position_description', lable: 'Chức vụ', minWidth: 250 },
+  { id: 'data_type', lable: 'Loại dữ liệu', minWidth: 100 },
+  { id: 'is_active', lable: 'Trạng thái', minWidth: 100 },
+  { id: 'actions', lable: 'Chức năng', minWidth: 200 },
+];
+
+export const defaultGetListPersonnel = [
+  {
+    data: 'id',
+    name: '',
+    orderable: false,
+    search: {
+      regex: false,
+      value: '',
+    },
+    searchable: false,
+  },
+  {
+    data: 'image_url',
+    name: '',
+    orderable: false,
+    searchable: true,
+    search: {
+      value: '',
+      regex: false,
+    },
+  },
+  {
+    data: 'user_name',
+    name: '',
+    orderable: false,
+    searchable: true,
+    search: {
+      value: '',
+      regex: false,
+    },
+  },
+  {
+    data: 'code',
+    name: '',
+    orderable: false,
+    searchable: true,
+    search: {
+      value: '',
+      regex: false,
+    },
+  },
+  {
+    data: 'full_name',
+    name: '',
+    orderable: false,
+    searchable: true,
+    search: {
+      value: '',
+      regex: false,
+    },
+  },
+  {
+    data: 'email',
+    name: '',
+    orderable: false,
+    searchable: true,
+    search: {
+      value: '',
+      regex: false,
+    },
+  },
+  {
+    data: 'phone',
+    name: '',
+    orderable: false,
+    searchable: true,
+    search: {
+      value: '',
+      regex: false,
+    },
+  },
+  {
+    data: 'sex',
+    name: '',
+    orderable: false,
+    searchable: true,
+    search: {
+      value: '',
+      regex: false,
+    },
+  },
+  {
+    data: 'birthdate',
+    name: '',
+    orderable: false,
+    searchable: true,
+    search: {
+      value: '',
+      regex: false,
+    },
+  },
+  {
+    data: 'title_description',
+    name: '',
+    orderable: false,
+    searchable: true,
+    search: {
+      value: '',
+      regex: false,
+    },
+  },
+  {
+    data: 'position_description',
+    name: '',
+    orderable: false,
+    searchable: true,
+    search: {
+      value: '',
+      regex: false,
+    },
+  },
+  {
+    data: 'data_type',
+    name: '',
+    orderable: false,
+    searchable: true,
+    search: {
+      value: '',
+      regex: false,
+    },
+  },
+  {
+    data: 'id',
+    name: '',
+    orderable: false,
+    searchable: true,
+    search: {
+      value: '',
+      regex: false,
+    },
+  },
+];
+export enum PersonnelStatus {
+  ACTIVE = 'Đã Kích Hoạt',
+  IN_ACTIVE = 'Chưa Kích Hoạt',
+}
+export enum ButtonToolTipPersonnel {
+  EDIT = 'Chỉnh Sửa',
+  DELETE = 'Xóa',
+  CHANGE_STATUS = 'Thay Đổi Trạng Thái',
+}
+export enum DialogKeyPersonnel {
+  DELETE_PERSONNEL = 'DELETE_PERSONNEL',
+  CHANGE_STATUS_PERSONNEL = 'CHANGE_STATUS_PERSONNEL',
+  UPDATE_PERSONNEL = 'UPDATE_PERSONNEL',
+  CREATE_PERSONNEL = 'CREATE_PERSONNEL',
+}
+export enum DialogTitlePersonnel {
+  DELETE_TITLE_PERSONNEL = 'Bạn có chắc chắn muốn xóa nhân viên này?',
+  CHANGE_STATUS_TITLE_PERSONNEL = 'Bạn có chắc chắn muốn thay đổi trạng thái của nhân viên này?',
+}
